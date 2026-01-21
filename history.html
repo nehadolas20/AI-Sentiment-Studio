@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History – SentioAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin:0; font-family:'Poppins',sans-serif; background:#f4f6fb; }
+        .navbar {
+            background:white; padding:16px 40px;
+            display:flex; justify-content:space-between; align-items:center;
+            box-shadow:0 4px 12px rgba(0,0,0,0.05);
+        }
+        .brand { font-weight:600; font-size:20px; color:#6366f1; }
+        .nav a { margin-left:18px; text-decoration:none; color:#374151; }
+        .container { max-width:1000px; margin:40px auto; padding:0 20px; }
+        table {
+            width:100%; border-collapse:collapse; background:white;
+            border-radius:12px; overflow:hidden;
+            box-shadow:0 10px 25px rgba(0,0,0,0.08);
+        }
+        th, td { padding:12px 14px; text-align:left; border-bottom:1px solid #eee; }
+        th { background:#eef2ff; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="brand">SentioAI</div>
+    <div class="nav">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/history">History</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2>{{ username }}’s Sentiment History</h2>
+    <table>
+        <tr>
+            <th>Text</th>
+            <th>Sentiment</th>
+            <th>Time</th>
+        </tr>
+        {% for r in rows %}
+        <tr>
+            <td>{{ r[0] }}</td>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 40px;
+            text-align: center;
+        }
+        textarea {
+            width: 60%;
+            height: 120px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .positive { color: green; }
+        .negative { color: red; }
+        .neutral { color: orange; }
+    </style>
+</head>
+<body>
+
+    <h1>AI-Based Sentiment Analyzer</h1>
+    <p>Enter any text and let AI detect its sentiment.</p>
+
+    <form method="POST">
+        <textarea name="text" placeholder="Enter your text here..." required></textarea><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        {% if "POSITIVE" in result %}
+            <div class="result positive">😊 {{ result }}</div>
+        {% elif "NEGATIVE" in result %}
+            <div class="result negative">😞 {{ result }}</div>
+        {% else %}
+            <div class="result neutral">😐 {{ result }}</div>
+        {% endif %}
+    {% endif %}
+
+</body>
+</html>
+
