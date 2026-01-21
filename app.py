@@ -1,7 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from textblob import TextBlob
+import textblob
+import nltk
 import sqlite3
 from datetime import datetime
+
+# Download required corpora on server (for Render)
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    import textblob.download_corpora
+    textblob.download_corpora.download_all()
+
 
 app = Flask(__name__)
 app.secret_key = "secret123"
@@ -119,5 +129,6 @@ if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
