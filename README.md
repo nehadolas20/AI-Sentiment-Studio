@@ -16,7 +16,5 @@ A full-stack AI-based Sentiment Analysis Web Application built using Python & Fl
 - SQLite
 - HTML/CSS
 
-## How to Run Locally
-```bash
-pip install -r requirements.txt
-python app.py
+## Live Demo  
+https://nehadolas20.pythonanywhere.com
