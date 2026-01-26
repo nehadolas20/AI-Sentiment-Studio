@@ -1,20 +1,31 @@
 # AI Sentiment Studio
 
-A full-stack AI-based Sentiment Analysis Web Application built using Python & Flask.
+A full-stack AI-powered Sentiment Analysis Web Application built using Python and Flask.
 
-## Features
-- User Authentication (Login / Register)
-- Beautiful Aesthetic UI
-- AI-based Sentiment Analysis
-- Personal Dashboard
-- Responsive Design (Mobile + Desktop)
+---
 
-## Tech Stack
+## 🔗 Live Demo
+👉 https://nehadolas20.pythonanywhere.com
+
+---
+
+## 📌 Features
+✔ User Authentication (Login & Register)  
+✔ AI-Powered Sentiment Analysis  
+✔ Beautiful, Responsive UI  
+✔ Sentiment Result Display  
+✔ Runs on Browser (Desktop & Mobile)
+
+---
+
+## 🧠 Technologies Used
 - Python
 - Flask
-- TextBlob (NLP)
-- SQLite
-- HTML/CSS
+- TextBlob (for NLP sentiment analysis)
+- SQLite (database)
+- HTML, CSS (frontend)
 
-## Live Demo  
-https://nehadolas20.pythonanywhere.com
+---
+
+## 📂 Project Structure
+
